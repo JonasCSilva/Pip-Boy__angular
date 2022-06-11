@@ -2,7 +2,6 @@
 
 #navbar {
   display: flex;
-  flex-direction: row;
   justify-content: space-around;
   align-items: center;
   border-bottom: 3px solid rgb(0, 180, 0);
@@ -23,7 +22,6 @@
 
 #navbar > div {
   display: flex;
-  flex-direction: row;
   justify-content: space-around;
   align-items: center;
   width: 84%;
@@ -54,6 +52,7 @@
 
 #navbar > div > div > a {
   font-size: 2rem;
+  font-weight: 600;
   cursor: pointer;
   margin: 0 0.5rem 0 0.5rem;
   background-color: black;
@@ -82,7 +81,7 @@
   border: 3px solid rgb(0, 180, 0);
   flex-grow: 1;
   margin-left: 1rem;
-  height: 80%;
+  height: 100%;
 }
 
 #level-bar > div {
@@ -111,10 +110,18 @@
   margin: 0;
 }
 
+// Container
+
 #container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 100vh;
   padding: 1rem;
+}
+
+// Main
+
+#main {
+  flex-grow: 1;
 }

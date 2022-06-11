@@ -1,10 +1,16 @@
-<div>
-  <div
-    *ngFor="let subPageName of subPagesNames; let i = index"
-    [class]="selectedSubPageName === subPageName ? 'active' : null"
-  >
-    <a [routerLink]="subPageName">{{ subPageName.toUpperCase() }}</a>
-  </div>
-</div>
+<section id="container">
+  <nav id="header">
+    <div
+      *ngFor="let subPageName of subPagesNames; let i = index"
+      [class]="selectedSubPageName === subPageName ? 'active' : null"
+    >
+      <a class="link" [routerLink]="subPageName">{{
+        subPageName.toUpperCase()
+      }}</a>
+    </div>
+  </nav>
 
-<router-outlet></router-outlet>
+  <main>
+    <router-outlet></router-outlet>
+  </main>
+</section>
