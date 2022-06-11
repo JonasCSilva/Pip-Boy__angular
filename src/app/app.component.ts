@@ -9,7 +9,7 @@ import { filter } from 'rxjs';
 })
 export class AppComponent {
   title = 'pip-boy';
-  pagesNamesArray = ['stat', 'inv', 'data', 'map', 'radio'];
+  pagesNames = ['stat', 'inv', 'data', 'map', 'radio'];
   selectedPageName!: string;
 
   constructor(private router: Router) {}
@@ -18,7 +18,7 @@ export class AppComponent {
     this.router.events
       .pipe(filter((event) => event instanceof NavigationEnd))
       .subscribe(({ urlAfterRedirects }: any) => {
-        this.selectedPageName = urlAfterRedirects.slice(1);
+        this.selectedPageName = (urlAfterRedirects as string).split('/')[1];
       });
   }
 }

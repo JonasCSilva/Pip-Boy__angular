@@ -2,10 +2,10 @@
   <nav id="navbar">
     <div>
       <div
-        *ngFor="let pageName of pagesNamesArray; let i = index"
+        *ngFor="let pageName of pagesNames; let i = index"
         [class]="selectedPageName === pageName ? 'active' : null"
       >
-        <a [routerLink]="'/' + pageName">{{ pageName.toUpperCase() }}</a>
+        <a [routerLink]="pageName">{{ pageName.toUpperCase() }}</a>
       </div>
     </div>
   </nav>

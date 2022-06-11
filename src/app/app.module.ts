@@ -8,6 +8,9 @@ import { InvComponent } from './inv/inv.component';
 import { DataComponent } from './data/data.component';
 import { MapComponent } from './map/map.component';
 import { RadioComponent } from './radio/radio.component';
+import { StatusComponent } from './stat/status/status.component';
+import { SpecialComponent } from './stat/special/special.component';
+import { PerksComponent } from './stat/perks/perks.component';
 
 @NgModule({
   declarations: [
@@ -16,13 +19,13 @@ import { RadioComponent } from './radio/radio.component';
     InvComponent,
     DataComponent,
     MapComponent,
-    RadioComponent
+    RadioComponent,
+    StatusComponent,
+    SpecialComponent,
+    PerksComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

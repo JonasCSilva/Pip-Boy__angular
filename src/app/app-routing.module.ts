@@ -4,10 +4,30 @@ import { DataComponent } from './data/data.component';
 import { InvComponent } from './inv/inv.component';
 import { MapComponent } from './map/map.component';
 import { RadioComponent } from './radio/radio.component';
+import { PerksComponent } from './stat/perks/perks.component';
+import { SpecialComponent } from './stat/special/special.component';
 import { StatComponent } from './stat/stat.component';
+import { StatusComponent } from './stat/status/status.component';
 
 const routes: Routes = [
-  { path: 'stat', component: StatComponent },
+  {
+    path: 'stat',
+    component: StatComponent,
+    children: [
+      {
+        path: 'status',
+        component: StatusComponent,
+      },
+      {
+        path: 'special',
+        component: SpecialComponent,
+      },
+      {
+        path: 'perks',
+        component: PerksComponent,
+      },
+    ],
+  },
   { path: 'inv', component: InvComponent },
   { path: 'data', component: DataComponent },
   { path: 'map', component: MapComponent },
