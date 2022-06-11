@@ -1,10 +1,12 @@
+// Navbar
+
 #navbar {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
   border-bottom: 3px solid rgb(0, 180, 0);
-  height: 7vh;
+  height: 5.5vh;
   width: 100%;
   position: relative;
 }
@@ -16,7 +18,7 @@
   width: calc(100% - 4px);
   border-left: 2px solid rgb(0, 180, 0);
   border-right: 2px solid rgb(0, 180, 0);
-  top: 54px;
+  top: 42px;
 }
 
 #navbar > div {
@@ -31,13 +33,13 @@
 #navbar > div > div.active::before {
   content: "";
   position: absolute;
-  height: 22px;
+  height: 29px;
   width: 100%;
   border-left: 2px solid rgb(0, 180, 0);
   border-right: 2px solid rgb(0, 180, 0);
   border-top: 2px solid rgb(0, 180, 0);
   background-color: black;
-  top: 31px;
+  top: 11px;
   z-index: -1;
 }
 
@@ -50,13 +52,16 @@
   justify-content: center;
 }
 
-#navbar > div > div > h2 {
+#navbar > div > div > a {
   font-size: 2rem;
   cursor: pointer;
   margin: 0 0.5rem 0 0.5rem;
   background-color: black;
   padding: 0 0.5rem 0 0.5rem;
+  text-decoration: none;
 }
+
+// Footer
 
 #footer {
   display: flex;
@@ -77,7 +82,7 @@
   border: 3px solid rgb(0, 180, 0);
   flex-grow: 1;
   margin-left: 1rem;
-  height: 50%;
+  height: 80%;
 }
 
 #level-bar > div {
@@ -87,7 +92,7 @@
 }
 
 #footer-hp {
-  width: 16%;
+  width: 16.25%;
   justify-content: flex-start;
 }
 
@@ -97,12 +102,12 @@
 }
 
 #footer-ap {
-  width: 16%;
+  width: 16.25%;
   justify-content: flex-end;
 }
 
 #footer > div > h4 {
-  font-size: 1.5rem;
+  font-size: 2rem;
   margin: 0;
 }
 
