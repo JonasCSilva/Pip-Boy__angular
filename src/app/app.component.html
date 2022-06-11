@@ -1,20 +1,11 @@
 <div id="container">
   <nav id="navbar">
     <div>
-      <div class="active">
-        <a routerLink="/stat"> STAT</a>
-      </div>
-      <div>
-        <a routerLink="/inv">INV</a>
-      </div>
-      <div>
-        <a routerLink="/data">DATA</a>
-      </div>
-      <div>
-        <a routerLink="/inv">MAP</a>
-      </div>
-      <div>
-        <a routerLink="/radio">RADIO</a>
+      <div
+        *ngFor="let pageName of pagesNamesArray; let i = index"
+        [class]="selectedPageName === pageName ? 'active' : null"
+      >
+        <a [routerLink]="'/' + pageName">{{ pageName.toUpperCase() }}</a>
       </div>
     </div>
   </nav>
