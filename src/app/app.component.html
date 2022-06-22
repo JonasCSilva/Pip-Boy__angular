@@ -5,7 +5,9 @@
         *ngFor="let pageName of pagesNames; let i = index"
         [class]="selectedPageName === pageName ? 'active' : null"
       >
-        <a [routerLink]="pageName">{{ pageName.toUpperCase() }}</a>
+        <a [routerLink]="pageName" (click)="doSomething($event)">{{
+          pageName.toUpperCase()
+        }}</a>
       </div>
     </div>
   </nav>

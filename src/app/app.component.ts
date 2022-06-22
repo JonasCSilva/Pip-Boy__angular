@@ -19,6 +19,13 @@ export class AppComponent {
       .pipe(filter((event) => event instanceof NavigationEnd))
       .subscribe(({ urlAfterRedirects }: any) => {
         this.selectedPageName = (urlAfterRedirects as string).split('/')[1];
+        /* .getBoundingClientRect() */
       });
+  }
+
+  doSomething(event: MouseEvent) {
+    const element = event.target as HTMLAnchorElement;
+    const { x, width } = element.getBoundingClientRect();
+    console.log(x + width / 2);
   }
 }
