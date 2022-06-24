@@ -1,15 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
 @Component({
-  selector: 'app-special',
-  templateUrl: './special.component.html',
-  styleUrls: ['./special.component.scss']
+  selector: "app-special",
+  template: `<p>special works!</p>`,
 })
 export class SpecialComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }
