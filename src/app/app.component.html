@@ -6,7 +6,7 @@
         routerLinkActive="active"
       >
         <a [routerLink]="pageName" (click)="doSomething($event)">{{
-          pageName.toUpperCase()
+          pageName | uppercase
         }}</a>
       </div>
     </div>

@@ -5,7 +5,7 @@
       [class]="selectedSubPageName === subPageName ? 'active' : null"
     >
       <a #cmp class="link" [routerLink]="subPageName">{{
-        subPageName.toUpperCase()
+        subPageName | uppercase
       }}</a>
     </div>
   </nav>
