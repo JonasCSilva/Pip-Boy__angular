@@ -4,9 +4,7 @@
       *ngFor="let subPageName of subPagesNames; let i = index"
       [class]="selectedSubPageName === subPageName ? 'active' : null"
     >
-      <a #cmp class="link" [routerLink]="subPageName">{{
-        subPageName | uppercase
-      }}</a>
+      <a #cmp class="link" [routerLink]="subPageName">{{ subPageName | uppercase }}</a>
     </div>
   </nav>
 

@@ -1,7 +1,7 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit } from '@angular/core'
 
 @Component({
-  selector: "app-map",
+  selector: 'app-map',
   template: `<div id="container">
     <img src="../../assets/fallout4map.jpg" id="map" />
   </div>`,
@@ -18,8 +18,8 @@ import { Component, OnInit } from "@angular/core";
         justify-content: center;
         align-items: center;
       }
-    `,
-  ],
+    `
+  ]
 })
 export class MapComponent implements OnInit {
   constructor() {}

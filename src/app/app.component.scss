@@ -11,7 +11,7 @@
 }
 
 #navbar::before {
-  content: "";
+  content: '';
   position: absolute;
   height: 8px;
   width: calc(100% - 4px);
@@ -29,7 +29,7 @@
 }
 
 #navbar > div > div.active::before {
-  content: "";
+  content: '';
   position: absolute;
   height: 29px;
   width: 100%;

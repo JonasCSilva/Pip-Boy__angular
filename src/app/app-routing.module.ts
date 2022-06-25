@@ -1,10 +1,11 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import { PerksComponent } from './stat/perks/perks.component';
-import { SpecialComponent } from './stat/special/special.component';
-import { SubheaderComponent } from './subheader/subheader.component';
-import { StatusComponent } from './stat/status/status.component';
-import { MapComponent } from './map/map.component';
+import { NgModule } from '@angular/core'
+import { RouterModule, Routes } from '@angular/router'
+
+import { MapComponent } from './map/map.component'
+import { PerksComponent } from './stat/perks/perks.component'
+import { SpecialComponent } from './stat/special/special.component'
+import { StatusComponent } from './stat/status/status.component'
+import { SubheaderComponent } from './subheader/subheader.component'
 
 const routes: Routes = [
   {
@@ -14,36 +15,36 @@ const routes: Routes = [
     children: [
       {
         path: 'status',
-        component: StatusComponent,
+        component: StatusComponent
       },
       {
         path: 'special',
-        component: SpecialComponent,
+        component: SpecialComponent
       },
       {
         path: 'perks',
-        component: PerksComponent,
+        component: PerksComponent
       },
-      { path: '', redirectTo: 'status', pathMatch: 'full' },
-    ],
+      { path: '', redirectTo: 'status', pathMatch: 'full' }
+    ]
   },
   {
     path: 'inv',
     component: SubheaderComponent,
-    data: ['weapons', 'apparel', 'aid', 'misc', 'junk', 'mods', 'ammo'],
+    data: ['weapons', 'apparel', 'aid', 'misc', 'junk', 'mods', 'ammo']
   },
   {
     path: 'data',
     component: SubheaderComponent,
-    data: ['quests', 'workshops', 'stats'],
+    data: ['quests', 'workshops', 'stats']
   },
   { path: 'map', component: MapComponent },
   // { path: 'radio', component:  },
-  { path: '', redirectTo: '/stat', pathMatch: 'full' },
-];
+  { path: '', redirectTo: '/stat', pathMatch: 'full' }
+]
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule],
+  exports: [RouterModule]
 })
 export class AppRoutingModule {}

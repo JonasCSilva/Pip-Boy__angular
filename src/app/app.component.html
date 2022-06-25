@@ -1,13 +1,8 @@
 <div id="container">
   <nav id="navbar">
     <div>
-      <div
-        *ngFor="let pageName of pagesNames; let i = index"
-        routerLinkActive="active"
-      >
-        <a [routerLink]="pageName" (click)="doSomething($event)">{{
-          pageName | uppercase
-        }}</a>
+      <div *ngFor="let pageName of pagesNames; let i = index" routerLinkActive="active">
+        <a [routerLink]="pageName" (click)="doSomething($event)">{{ pageName | uppercase }}</a>
       </div>
     </div>
   </nav>
