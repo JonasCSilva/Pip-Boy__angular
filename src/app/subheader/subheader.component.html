@@ -6,8 +6,7 @@
       class="link"
       [ngClass]="{
         link1: index - i === 1 || index - i === -1,
-        link2: index - i === 2 || index - i === -2,
-        linkDeactivated: index - i > 2 || index - i < -2
+        link2: index - i === 2 || index - i === -2
       }"
       routerLinkActive="active"
       [routerLink]="subPageName"

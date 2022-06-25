@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core'
 import { RouterModule, Routes } from '@angular/router'
 
+import { GenericComponent } from './generic/generic.component'
 import { MapComponent } from './map/map.component'
 import { PerksComponent } from './stat/perks/perks.component'
 import { SpecialComponent } from './stat/special/special.component'
@@ -31,7 +32,38 @@ const routes: Routes = [
   {
     path: 'inv',
     component: SubheaderComponent,
-    data: ['weapons', 'apparel', 'aid', 'misc', 'junk', 'mods', 'ammo']
+    data: ['weapons', 'apparel', 'aid', 'misc', 'junk', 'mods', 'ammo'],
+    children: [
+      {
+        path: 'weapons',
+        component: GenericComponent
+      },
+      {
+        path: 'apparel',
+        component: GenericComponent
+      },
+      {
+        path: 'aid',
+        component: GenericComponent
+      },
+      {
+        path: 'misc',
+        component: GenericComponent
+      },
+      {
+        path: 'junk',
+        component: GenericComponent
+      },
+      {
+        path: 'mods',
+        component: GenericComponent
+      },
+      {
+        path: 'ammo',
+        component: GenericComponent
+      },
+      { path: '', redirectTo: 'weapons', pathMatch: 'full' }
+    ]
   },
   {
     path: 'data',

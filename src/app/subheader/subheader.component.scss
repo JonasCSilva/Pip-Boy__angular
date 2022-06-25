@@ -47,11 +47,9 @@ main {
   display: block;
 }
 
-/* .link:not(.active, .link1, .link2) {
-  opacity: 0;
-  pointer-events: none;
-} */
-
-.linkDeactivated {
-  display: none;
+.link:not(.active, .link1, .link2) {
+  // opacity: 0.1;
+  // pointer-events: none;
+  // user-select: none;
+  visibility: hidden;
 }
