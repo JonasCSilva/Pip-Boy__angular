@@ -1,9 +1,6 @@
 <section id="container">
   <nav id="header">
-    <div
-      *ngFor="let subPageName of subPagesNames; let i = index"
-      [class]="selectedSubPageName === subPageName ? 'active' : null"
-    >
+    <div *ngFor="let subPageName of subPagesNames; let i = index" routerLinkActive="active">
       <a #cmp class="link" [routerLink]="subPageName">{{ subPageName | uppercase }}</a>
     </div>
   </nav>

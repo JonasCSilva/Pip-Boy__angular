@@ -40,7 +40,7 @@ const routes: Routes = [
   },
   { path: 'map', component: MapComponent },
   // { path: 'radio', component:  },
-  { path: '', redirectTo: '/stat', pathMatch: 'full' }
+  { path: '', redirectTo: '/stat/status', pathMatch: 'full' }
 ]
 
 @NgModule({

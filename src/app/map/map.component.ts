@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core'
+import { Component } from '@angular/core'
 
 @Component({
   selector: 'app-map',
@@ -21,8 +21,4 @@ import { Component, OnInit } from '@angular/core'
     `
   ]
 })
-export class MapComponent implements OnInit {
-  constructor() {}
-
-  ngOnInit(): void {}
-}
+export class MapComponent {}
