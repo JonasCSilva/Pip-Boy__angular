@@ -68,10 +68,25 @@ const routes: Routes = [
   {
     path: 'data',
     component: SubheaderComponent,
-    data: ['quests', 'workshops', 'stats']
+    data: ['quests', 'workshops', 'stats'],
+    children: [
+      {
+        path: 'quests',
+        component: GenericComponent
+      },
+      {
+        path: 'workshops',
+        component: GenericComponent
+      },
+      {
+        path: 'stats',
+        component: GenericComponent
+      },
+      { path: '', redirectTo: 'quests', pathMatch: 'full' }
+    ]
   },
   { path: 'map', component: MapComponent },
-  // { path: 'radio', component:  },
+  { path: 'radio', component: GenericComponent },
   { path: '', redirectTo: '/stat/status', pathMatch: 'full' }
 ]
 
