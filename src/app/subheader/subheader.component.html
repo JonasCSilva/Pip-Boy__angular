@@ -1,8 +1,13 @@
 <section id="container">
-  <nav id="header">
-    <div *ngFor="let subPageName of subPagesNames; let i = index" routerLinkActive="active">
-      <a #cmp class="link" [routerLink]="subPageName">{{ subPageName | uppercase }}</a>
-    </div>
+  <nav id="header" #header [ngStyle]="{ left: newLeft }">
+    <a
+      #link
+      *ngFor="let subPageName of subPagesNames; let i = index"
+      class="link"
+      routerLinkActive="active"
+      [routerLink]="subPageName"
+      >{{ subPageName | uppercase }}</a
+    >
   </nav>
 
   <main>

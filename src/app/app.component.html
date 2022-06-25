@@ -2,7 +2,7 @@
   <nav id="navbar">
     <div>
       <div *ngFor="let pageName of pagesNames; let i = index" routerLinkActive="active">
-        <a [routerLink]="pageName" (click)="doSomething($event)">{{ pageName | uppercase }}</a>
+        <a [routerLink]="pageName" #link>{{ pageName | uppercase }}</a>
       </div>
     </div>
   </nav>
