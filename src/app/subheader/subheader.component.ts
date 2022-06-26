@@ -68,7 +68,7 @@ export class SubheaderComponent implements OnInit, AfterViewInit {
     for (let i = 0; i < this.index; i++) {
       aux += this.widths[i] + 16
     }
-    const temp = this.elementsService.lefts[2] - aux - this.widths[this.index] / 2
+    const temp = this.elementsService.lefts[2] - 16 - aux - this.widths[this.index] / 2
     this.newLeft = temp + 'px'
   }
 }

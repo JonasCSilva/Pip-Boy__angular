@@ -2,54 +2,35 @@
   position: absolute;
   display: flex;
   align-items: center;
-}
-
-#container {
-  width: 100%;
-  height: 100%;
-  justify-content: space-between;
-  flex-direction: column;
-  align-items: center;
-  display: flex;
-  padding: 0.8rem;
-}
-
-main {
-  flex-grow: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  top: 1rem;
 }
 
 .link {
   margin-right: 1rem;
-  // display: none;
   text-decoration: none;
   font-size: 2rem;
 }
 
 .link1 {
   opacity: 0.4;
-  display: block;
 }
 
 .link2 {
   opacity: 0.1;
-  display: block;
 }
 
 .link:last-child {
   margin-right: 0rem;
 }
 
-.link.active {
-  opacity: 1;
-  display: block;
+.link:not(.active, .link1, .link2) {
+  visibility: hidden;
 }
 
-.link:not(.active, .link1, .link2) {
-  // opacity: 0.1;
-  // pointer-events: none;
-  // user-select: none;
-  visibility: hidden;
+:host {
+  position: relative;
+  flex: 1 1 auto;
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }

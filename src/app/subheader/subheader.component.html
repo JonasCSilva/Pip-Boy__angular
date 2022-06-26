@@ -1,20 +1,16 @@
-<section id="container">
-  <nav id="header" #header [ngStyle]="{ left: newLeft }">
-    <a
-      #link
-      *ngFor="let subPageName of subPagesNames; let i = index"
-      class="link"
-      [ngClass]="{
-        link1: index - i === 1 || index - i === -1,
-        link2: index - i === 2 || index - i === -2
-      }"
-      routerLinkActive="active"
-      [routerLink]="subPageName"
-      >{{ subPageName | uppercase }}</a
-    >
-  </nav>
+<nav id="header" #header [ngStyle]="{ left: newLeft }">
+  <a
+    #link
+    *ngFor="let subPageName of subPagesNames; let i = index"
+    class="link"
+    [ngClass]="{
+      link1: index - i === 1 || index - i === -1,
+      link2: index - i === 2 || index - i === -2
+    }"
+    routerLinkActive="active"
+    [routerLink]="subPageName"
+    >{{ subPageName | uppercase }}</a
+  >
+</nav>
 
-  <main>
-    <router-outlet></router-outlet>
-  </main>
-</section>
+<router-outlet></router-outlet>

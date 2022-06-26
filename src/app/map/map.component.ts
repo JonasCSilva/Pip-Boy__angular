@@ -2,21 +2,28 @@ import { Component } from '@angular/core'
 
 @Component({
   selector: 'app-map',
-  template: `<div id="container">
-    <img src="../../assets/fallout4map.jpg" id="map" />
-  </div>`,
+  template: `
+    <div class="container">
+      <img src="../../assets/fallout4map.jpg" />
+    </div>
+  `,
   styles: [
     `
-      #map {
-        height: 98%;
+      :host {
+        flex: 1 1 auto;
       }
 
-      #container {
+      .container {
         height: 100%;
-        width: 100%;
+        padding: 0.3rem;
         display: flex;
         justify-content: center;
         align-items: center;
+      }
+
+      .container > img {
+        width: inherit;
+        height: inherit;
       }
     `
   ]
